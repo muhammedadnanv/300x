@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneApp Welcome</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .welcome-container {
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 10px 20px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .btn-custom:hover {
+            background-color: #f8f9fa;
+        }
+        .or-text {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>OneApp</h1>
+        <button class="btn btn-custom" > <a href="./siguinup.html">Create new account</a></button>
+
+        <div class="or-text">OR</div>
+        <p>Already have an account?</p>
+        <button class="btn btn-custom" > <a href="./login.html">Sign in</a></button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function createAccount() {
+            alert('Navigate to create account page.');
+            // Implement actual navigation to create account page here.
+        }
+
+        function signIn() {
+            alert('Navigate to sign in page.');
+            // Implement actual navigation to sign in page here.
+        }
+    </script>
+</body>
+</html>

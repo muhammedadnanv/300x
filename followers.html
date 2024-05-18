@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Followers List</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 90%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        #followers-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #followers-list li {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            align-items: center;
+        }
+
+        #followers-list li img {
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        #followers-list li span {
+            color: #ddd;
+        }
+
+        #followers-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Followers List</h1>
+        <ul id="followers-list"></ul>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Your JavaScript code remains unchanged
+        document.addEventListener('DOMContentLoaded', () => {
+            const followersList = document.getElementById('followers-list');
+
+            const generateRandomUser = () => {
+                const firstNames = ['John', 'Jane', 'Alex', 'Emily', 'Chris', 'Katie', 'Michael', 'Sarah', 'David', 'Laura'];
+                const lastNames = ['Smith', 'Johnson', 'Brown', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin'];
+                const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+                const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+                return {
+                    name: `${randomFirstName} ${randomLastName}`,
+                    avatar: `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}`
+                };
+            };
+
+            const createFollowerItem = (user) => {
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                img.src = user.avatar;
+                img.alt = `${user.name}'s avatar`;
+                img.width = 50;
+                img.height = 50;
+                const span = document.createElement('span');
+                span.textContent = user.name;
+                li.appendChild(img);
+                li.appendChild(span);
+                return li;
+            };
+
+            for (let i = 0; i < 400; i++) {
+                const user = generateRandomUser();
+                const followerItem = createFollowerItem(user);
+                followersList.appendChild(followerItem);
+            }
+        });
+    </script>
+</body>
+</html>

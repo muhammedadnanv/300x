@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload and Reel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        .video-reel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            width: 100%;
+            height: 300px;
+            white-space: nowrap;
+        }
+
+        .video-item {
+            flex: 0 0 300px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Upload Video</h1>
+        <div class="form-group">
+            <input type="file" class="form-control-file" id="videoInput" accept="video/*">
+        </div>
+        <button class="btn btn-block" onclick="uploadVideo()">Upload</button>
+
+        <h1 class="text-center mt-5">Video Reel</h1>
+        <div class="video-reel mt-3" id="videoReel"></div>
+    </div>
+
+    <script>
+        function uploadVideo() {
+            const videoInput = document.getElementById('videoInput');
+            const file = videoInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const videoReel = document.getElementById('videoReel');
+                    const videoElement = document.createElement('video');
+                    videoElement.src = event.target.result;
+                    videoElement.controls = true;
+                    videoElement.style.marginRight = '10px';
+                    videoReel.appendChild(videoElement);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please select a video file.');
+            }
+        }
+    </script>
+</body>
+</html>

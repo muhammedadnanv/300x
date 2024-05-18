@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneApp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .nav-tabs .nav-link {
+            color: white;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: black;
+            border-color: black;
+        }
+
+        .content-area {
+            height: calc(100vh - 136px); /* Adjust height based on top and bottom navbars */
+            background-color: black;
+        }
+
+        .navbar.fixed-bottom .nav-link i {
+            font-size: 1.5em;
+        }
+
+        .navbar.fixed-bottom .nav-link {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <span class="navbar-brand mb-0 h1">OneApp</span>
+        <div>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button"><i class="fas fa-plus"></i></button>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button"><i class="fas fa-bell"></i></button>
+        </div>
+    </nav>
+
+    <!-- Tab Navigation -->
+    <div class="container-fluid">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="foryou.html">For you</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="followers.html">Following</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container-fluid content-area">
+        <!-- Content will go here -->
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-around">
+            <a class="nav-link text-center text-light" href="./commingsoon.html">
+                <i class="fas fa-pencil-alt"></i><br>Thoughts
+            </a>
+            <a class="nav-link text-center text-light" href="./commingsoon.html">
+                <i class="fas fa-clock"></i><br>Moments
+            </a>
+            <a class="nav-link text-center text-light" href="./commingsoon.html">
+                <i class="fas fa-microphone"></i><br>Beep
+            </a>
+            <a class="nav-link text-center text-light" href="./videos.html">
+                <i class="fas fa-video"></i><br>Videos
+            </a>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

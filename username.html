@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneApp Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .registration-container {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+        }
+        .form-control::placeholder {
+            color: white;
+        }
+        .btn-link {
+            color: white;
+        }
+        .btn-link:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Welcome to OneApp</h1>
+        <h3>Username!</h3>
+        <p>Step 3 of 3</p>
+        <p class="text-left"><strong>Choose your username</strong></p>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-link">Back</button>
+            <button class="btn btn-link"><a href="home.html">Finish</a></button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

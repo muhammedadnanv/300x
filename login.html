@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - OneApp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-group label {
+            color: #ccc;
+        }
+        .form-group input {
+            background-color: #444;
+            color: #fff;
+            border: none;
+        }
+        .form-group input::placeholder {
+            color: #888;
+        }
+        .btn-secondary {
+            background-color: #555;
+            border: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h1 class="text-center">Welcome to OneApp</h1>
+            <form action="https://formbold.com/s/3njvp" class="mt-4" method="post">
+                <h4>Create account</h4>
+                <p>Step 1 of 3</p>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Choose your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate"><i class="fas fa-calendar-alt"></i> Your birth date</label>
+                    <input type="text" class="form-control" id="birthdate" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+                    <button type="submit" class="btn btn-primary"> <a href="./username.html">Next</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('createAccountForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Form submitted!');
+    });
+
+    function goBack() {
+        alert('Going back!');
+    }
+</script>
+</body>
+</html>
